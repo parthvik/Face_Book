@@ -1,7 +1,9 @@
-// module.exports.home = function(req,res) {
-//     return res.end('<h1>Express is up for face_book</h1>')
-// }
-module.exports.home = function(req,res) {
-    return res.render('home', {title: 'Home'});
-    
+module.exports.home = function(req, res){
+    console.log(req.cookies);
+    res.cookie('user_id', 25);
+    return res.render('home', {
+        title: "Home"
+    });
 }
+
+// module.exports.actionName = function(req, res){}
